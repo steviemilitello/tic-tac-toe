@@ -1,0 +1,19 @@
+div {
+    border: 1px solid black;
+}
+
+#container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    width: 950px;
+    height: 950px;
+}
+
+.square {
+    display: flex;
+    width: 275px;
+    height: 275px;
+}
+
