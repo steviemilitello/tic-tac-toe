@@ -8,27 +8,22 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    <!-- x button will fill a div with x -->
-    <button id="xoButton">X or O</button>
-    <!-- o button will fill a div with o -->
     <!-- button to reset -->
-    <button id = "resetButton">Reset</button>
+    <button id = "reset">Reset</button>
     <p id="message"></p>
     <!-- 3 x 3 grid of divs -->
     <!-- container will hold divs -->
     <div id="container">
         <!-- tic tac toe squares -->
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-    </div>
-    </div>
+        <div id ="a" class ="game-square" onclick = "addSymbol()"></div>
+        <div id ="b" class ="game-square" onclick = "addSymbol()"></div>
+        <div id ="c" class ="game-square" onclick = "addSymbol()"></div>
+        <div id ="d" class ="game-square"></div>
+        <div id ="e" class ="game-square"></div>
+        <div id ="f" class ="game-square"></div>
+        <div id ="g" class ="game-square"></div>
+        <div id ="h" class ="game-square"></div>
+        <div id ="i" class ="game-square"></div>
     </div>
     <script src="js/app.js"></script>  
 

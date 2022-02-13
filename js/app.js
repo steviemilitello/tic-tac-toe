@@ -1,37 +1,37 @@
-const markSymbol = document.querySelector("#xoButton")
-const markO = document.querySelector("oButton")
-const resetGame = document.querySelector("resetButton")
-const gameSquare = document.querySelector("square")
+const gameBoard = document.querySelector("#container")
+const resetButton = document.querySelector("#reset")
+const gameSquare = document.querySelector(".game-square")
+const message = document.querySelector("#message")
 
-// click handler that will add X or O 
+// A variable to keep track of moves, indicate whether or not to draw X or O 
 
-const addSymbol = (event) => {
-    // add or select X or O
-    const symbol = event.target.innertext = "X"
-    console.log("the symbol is: ", symbol)
-    const symbolSquare = document.createElement('div')
-    symbolSquare.classList.add("symbolSquare")
-    symbolSquare.innertext = symbol 
-    square.appendChild(symbolSquare)
-    message.innerText = `added symbol ${symbol}`
-}
+// const player = {
+//     currentChoice: null
+// }
+
+// const xChoice = "X"
+// const oChoice = "O"
+
+// const playerChoice = () => {
+//     if (player.currentChoice === xChoice) {
+//         // ??? add O ??? ///
+//     } else (player.currentChoice === oChoice)
+//        // ??? add X ????
+// }
 
 // A user should be able to click on different squares to make a move.
 
-const makeMove = () => {
-    // square creation loop 
-    for (let i = 0; i < 10; i++) {
-        console.log("a square was made")
-    // create new square
-    const newSquare = document.createElement("div")
-    // make div a square 
-    newSquare.classList.add("newSquare")
-    // append divs to square
-    gameSquare.appendChild(newSquare)
-    // assign x or o to square
-    const x = "X" 
-    const O = "O"
-    newSquare.addEventListener("click, addSymbol")
+const addSymbol = (event) => {
+    // add X or O symbol
+    const symbol = document.createTextNode("X")
+    console.log("the symbol is", symbol)
+    // select game square
+    gameSquare.classList.add("game-square")
+    // add symbol to the selected square
+    gameSquare.appendChild(symbol)
+    // sends a message to user that symbol has been added 
+    message.innerText = `added symbol to board`
+
 }
 
 // Every click will alternate between marking an X and O
@@ -44,10 +44,12 @@ const makeMove = () => {
 
 // Add a reset button that will clear the contents of the board.
 
-const clearBoard = (resetButton) => {
+const clearBoard = () => {
     while (gameSquare.firstChild) {
+    // if there is a child of the gameBoard it is removed
         gameSquare.removeChild(gameSquare.firstChild)
     }
+message.innerText = "cleared board"
 }
 
 // Display a message to indicate which turn is about to be played.
@@ -58,8 +60,9 @@ const clearBoard = (resetButton) => {
 
 // Hint: Determine a set of winning combinations. Check those combinations on the board contents after every move.
 
+// DOM content
+
 document.addEventListener("DOMContentLoaded", () => {
-    xoButton.addEventListener("click", makeMove)
-    resetButton.addEventlistener("click", clearBoard)
-    makeMove()
+    // gameSquare.addEventListener("click", addSymbol)
+    resetButton.addEventListener("click", clearBoard)
 })

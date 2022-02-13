@@ -7,13 +7,16 @@ div {
     flex-flow: row wrap;
     justify-content: center;
     align-content: space-evenly;
-    width: 950px;
-    height: 950px;
+    width: 350px;
+    height: 350px;
 }
 
-.square {
+.game-square {
     display: flex;
-    width: 275px;
-    height: 275px;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px; 
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
 }
-
