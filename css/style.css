@@ -7,6 +7,7 @@ div {
     flex-flow: row wrap;
     justify-content: center;
     align-content: space-evenly;
+    border: 1px whitesmoke;
     width: 350px;
     height: 350px;
 }
