@@ -70,7 +70,7 @@ const addMove = (event) => {
 const clearBoard = () => {
     location.reload()
     while (gameSquare.firstChild) {
-    // if there is a child of the gameBoard it is removed
+    // if there is a child of the gameSquare it is removed
         gameSquare.removeChild(gameSquare.firstChild)
     }
 message.innerText = "cleared board"
