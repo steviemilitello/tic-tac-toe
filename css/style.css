@@ -1,6 +1,15 @@
+
 div {
     border: 1px solid black;
 }
+
+.right-side {
+    border-right-color: white;
+}
+
+.left-side {
+    border-left-color: white;
+} 
 
 #container {
     display: flex;
