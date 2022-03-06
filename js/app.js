@@ -11,30 +11,66 @@ const square7 = document.querySelector("#square-7")
 const square8 = document.querySelector("#square-8")
 const square9 = document.querySelector("#square-9")
 const message = document.querySelector("#message")
+const winMessage = document.querySelector("#win-message")
 
 // A variable to keep track of moves, indicate whether or not to draw X or O 
 
-const playerMoveX = "X"
-const playerMoveO = "O"
-let player = playerMoveX
+let playerX = "X"
+let playerO = "O"
 
-// A user should be able to click on different squares to make a moves
-// Every click will alternate between marking an X and O
-// Upon marking of an individual cell, use JavaScript to add an X or O to the cell, according to whose turn it is.
-    // wasn't able to do this, only able to add X or O to square
-
-const addMove = (event) => {
-    event.target.append(player)
-    if (player === playerMoveX) {
-        player === playerMoveO 
-    } else {
-        player === playerMoveX
-    }
+const Move1 = () => {
+    square1.append(playerX)
     // Display a message to indicate which turn is about to be played.
-    message.innerText = `it is ${player}'s turn!`
+    message.innerText = `it is ${playerX}'s turn!`
 }
 
-// Add a reset button that will clear the contents of the board.
+const Move2 = () => {
+    square2.append(playerO)
+    // Display a message to indicate which turn is about to be played.
+    message.innerText = `it is ${playerO}'s turn!`
+}
+
+const Move3 = () => {
+    square3.append(playerX)
+    // Display a message to indicate which turn is about to be played.
+    message.innerText = `it is ${playerX}'s turn!`
+}
+
+const Move4 = () => {
+    square4.append(playerO)
+    // Display a message to indicate which turn is about to be played.
+    message.innerText = `it is ${playerO}'s turn!`
+}
+
+const Move5 = () => {
+    square5.append(playerX)
+    // Display a message to indicate which turn is about to be played.
+    message.innerText = `it is ${playerX}'s turn!`
+}
+
+const Move6 = () => {
+    square6.append(playerO)
+    // Display a message to indicate which turn is about to be played.
+    message.innerText = `it is ${playerO}'s turn!`
+}
+
+const Move7 = () => {
+    square7.append(playerX)
+    // Display a message to indicate which turn is about to be played.
+    message.innerText = `it is ${playerX}'s turn!`
+}
+
+const Move8 = () => {
+    square8.append(playerO)
+    // Display a message to indicate which turn is about to be played.
+    message.innerText = `it is ${playerO}'s turn!`
+}
+
+const Move9 = () => {
+    square9.append(playerX)
+    // Display a message to indicate which turn is about to be played.
+    message.innerText = `it is ${playerX}'s turn!`
+}
 
 const clearBoard = () => {
     location.reload()
@@ -44,26 +80,72 @@ const clearBoard = () => {
     }
 }
 
+// Detect Win Conditions
+
+const winCondition = () => {
+    if (square1.innerText === "X" && square2.innerText === "X" && square3.innerText === "X") {
+        winMessage.innerText = "You Won!"
+        clearBoard()
+    } else if (square4.innerText === "X" && square5.innerText === "X" && square6.innerText === "X") {
+        winMessage.innerText = "You Won!"
+        clearBoard()
+    } else if (square7.innerText === "X" && square8.innerText === "X" && square9.innerText === "X") {
+        winMessage.innerText = "You Won!"
+        clearBoard()
+    } else if (square3.innerText === "X" && square5.innerText === "X" && square7.innerText === "X") {
+        winMessage.innerText = "You Won!"
+        clearBoard()
+    } else if (square1.innerText === "X" && square5.innerText === "X" && square9.innerText === "X") {
+        winMessage.innerText = "You Won!"
+        clearBoard()
+    } else if (square1.innerText === "O" && square2.innerText === "O" && square3.innerText === "O") {
+        winMessage.innerText = "You Won!"
+        clearBoard()
+    } else if (square4.innerText === "O" && square5.innerText === "O" && square6.innerText === "O") {
+        winMessage.innerText = "You Won!"
+        clearBoard()
+    } else if (square7.innerText === "O" && square8.innerText === "O" && square9.innerText === "O") {
+        winMessage.innerText = "You Won!"
+        clearBoard()
+    } else if (square3.innerText === "O" && square5.innerText === "O" && square7.innerText === "O") {
+        winMessage.innerText = "You Won!"
+        clearBoard()
+    } else if (square1.innerText === "O" && square5.innerText === "O" && square9.innerText === "O") {
+        winMessage.innerText = "You Won!"
+        clearBoard()
+    } else if 
+        (square1.firstChild && square2.firstChild && square3.firstChild
+        && square4.firstChild && square5.firstChild && square6.firstChild
+        && square7.firstChild && square8.firstChild && square9.firstChild) {
+        winMessage.innerText ="Tie Game!"
+    }
+}
+
 // Detect draw conditions (ties/cat's game)
 
-// Detect winner: Stop game and declare the winner if one player ends up getting three in a row.
 
-// Hint: Determine a set of winning combinations. Check those combinations on the board contents after every move.
 
 // DOM content
 
 document.addEventListener("DOMContentLoaded", () => {
     // A cell should not be able to be replayed once marked
     // You should not be able to click remaining empty cells after the game is over
-    square1.addEventListener("click", addMove, {once: true})
-    square2.addEventListener("click", addMove, {once: true})
-    square3.addEventListener("click", addMove, {once: true})
-    square4.addEventListener("click", addMove, {once: true})
-    square5.addEventListener("click", addMove, {once: true})
-    square6.addEventListener("click", addMove, {once: true})
-    square7.addEventListener("click", addMove, {once: true})
-    square8.addEventListener("click", addMove, {once: true})
-    square9.addEventListener("click", addMove, {once: true})
+    square1.addEventListener("click", Move1, {once: true})
+    square2.addEventListener("click", Move2, {once: true})
+    square3.addEventListener("click", Move3, {once: true})
+    square4.addEventListener("click", Move4, {once: true})
+    square5.addEventListener("click", Move5, {once: true})
+    square6.addEventListener("click", Move6, {once: true})
+    square7.addEventListener("click", Move7, {once: true})
+    square8.addEventListener("click", Move8, {once: true})
+    square9.addEventListener("click", Move9, {once: true})
+    square1.addEventListener("click", winCondition)
+    square2.addEventListener("click", winCondition)
+    square3.addEventListener("click", winCondition)
+    square4.addEventListener("click", winCondition)
+    square5.addEventListener("click", winCondition)
+    square6.addEventListener("click", winCondition)
+    square7.addEventListener("click", winCondition)
+    square9.addEventListener("click", winCondition)
     resetButton.addEventListener("click", clearBoard)
 })
-
