@@ -15,61 +15,67 @@ const winMessage = document.querySelector("#win-message")
 
 // A variable to keep track of moves, indicate whether or not to draw X or O 
 
-let playerX = "X"
-let playerO = "O"
+
+// let playerX = "X"
+// let playerO = "O"
+let currentPlayer = "X"
+
+const playerChange = () => {
+    currentPlayer = currentPlayer === "X" ? "O" : "X"
+}
 
 const Move1 = () => {
-    square1.append(playerX)
-    // Display a message to indicate which turn is about to be played.
-    message.innerText = `it is ${playerX}'s turn!`
+    square1.append(currentPlayer)
+    message.innerText = `it is ${currentPlayer}'s turn!`
+    playerChange()
 }
 
 const Move2 = () => {
-    square2.append(playerO)
-    // Display a message to indicate which turn is about to be played.
-    message.innerText = `it is ${playerO}'s turn!`
+    square2.append(currentPlayer)
+    message.innerText = `it is ${currentPlayer}'s turn!`
+    playerChange()
 }
 
 const Move3 = () => {
-    square3.append(playerX)
-    // Display a message to indicate which turn is about to be played.
-    message.innerText = `it is ${playerX}'s turn!`
+    square3.append(currentPlayer)
+    message.innerText = `it is ${currentPlayer}'s turn!`
+    playerChange()
 }
 
 const Move4 = () => {
-    square4.append(playerO)
-    // Display a message to indicate which turn is about to be played.
-    message.innerText = `it is ${playerO}'s turn!`
+    square4.append(currentPlayer)
+    message.innerText = `it is ${currentPlayer}'s turn!`
+    playerChange()
 }
 
 const Move5 = () => {
-    square5.append(playerX)
-    // Display a message to indicate which turn is about to be played.
-    message.innerText = `it is ${playerX}'s turn!`
+    square5.append(currentPlayer)
+    message.innerText = `it is ${currentPlayer}'s turn!`
+    playerChange()
 }
 
 const Move6 = () => {
-    square6.append(playerO)
-    // Display a message to indicate which turn is about to be played.
-    message.innerText = `it is ${playerO}'s turn!`
+    square6.append(currentPlayer)
+    message.innerText = `it is ${currentPlayer}'s turn!`
+    playerChange()
 }
 
 const Move7 = () => {
-    square7.append(playerX)
-    // Display a message to indicate which turn is about to be played.
-    message.innerText = `it is ${playerX}'s turn!`
+    square7.append(currentPlayer)
+    message.innerText = `it is ${currentPlayer}'s turn!`
+    playerChange()
 }
 
 const Move8 = () => {
-    square8.append(playerO)
-    // Display a message to indicate which turn is about to be played.
-    message.innerText = `it is ${playerO}'s turn!`
+    square8.append(currentPlayer)
+    message.innerText = `it is ${currentPlayer}'s turn!`
+    playerChange()
 }
 
 const Move9 = () => {
-    square9.append(playerX)
-    // Display a message to indicate which turn is about to be played.
-    message.innerText = `it is ${playerX}'s turn!`
+    square9.append(currentPlayer)
+    message.innerText = `it is ${currentPlayer}'s turn!`
+    playerChange()
 }
 
 const clearBoard = () => {
